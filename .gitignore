@@ -1,0 +1,22 @@
+# 個人設定（含偏好、環境變數名稱）
+CLAUDE.local.md
+
+# 環境變數真值（絕對不上傳）
+.env
+.env.*
+!.env.example
+
+# 金鑰
+*.key
+*.pem
+
+# 私密內容區（員工 / 客戶 / 財務）
+content/private/
+data/private/
+
+# 系統雜檔
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
