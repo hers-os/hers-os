@@ -1,22 +1,58 @@
 # 個人設定（含偏好、環境變數名稱）
 CLAUDE.local.md
 
-# 環境變數真值（絕對不上傳）
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+
+# Env / secrets
 .env
 .env.*
 !.env.example
-
-# 金鑰
 *.key
 *.pem
+secrets/
 
 # 私密內容區（員工 / 客戶 / 財務）
 content/private/
 data/private/
 
-# 系統雜檔
-.DS_Store
-Thumbs.db
-*.swp
-.vscode/
-.idea/
+# Python (若未來用)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Node (若未來用)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+build/
+
+# Logs / 暫存
+*.log
+logs/
+tmp/
+.cache/
+
+# 狀態層（機器寫入、不入版控；之後 02-state/ 啟用時取消註解）
+# 02-state/**/*.json
+# 02-state/**/*.sqlite
+
+# AI 工具暫存
+.claude/local/
+.aider*
