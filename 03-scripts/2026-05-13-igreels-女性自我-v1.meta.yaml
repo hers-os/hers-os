@@ -1,0 +1,76 @@
+script_file: ./2026-05-13-igreels-女性自我-v1.md
+generated_at: 2026-05-13T07:30:00+08:00
+generated_by: script-blender
+skill_version: v0.1
+
+# === 輸入面 ===
+
+topic: 女性自我
+platform: igreels
+mode: blend
+
+borrow:
+  - reference: 楊天真
+    reference_file: voice/references/楊天真.md
+    reference_status: calibrated  # 緣緣 2026-05-04 校準完成
+    layer: 使命
+    strength: 強
+    strength_pct_estimate: 45
+
+borrow_total_strength_pct: 45  # < 50 上限 ✅
+
+# === 放寬紀錄（v0.2 第 3.1 節） ===
+
+loosened_rules:
+  - rule: 鐵律2-不污染嘴
+    detail: 借楊天真[使命層]、強度=強(45%)、句感微量滲透
+    specific_phrases:
+      - "把自己放心上"
+      - "把自己當一個值得認真對待的人"
+    note: 上述兩語對應楊天真著作《把自己當回事兒》主題、未整句搬、為緣緣式包裝；強強度下屬預期滲透
+  - rule: 主題與借層方向高度重合風險標記
+    detail: 主題「女性自我」與楊天真使命「推女性把自己當回事」天然同向、再疊強強度、滲透感較中性題目放大
+    note: 雙重風險、20 支審查時優先抽看
+
+# === Leak 檢查結果 ===
+
+leak_warnings: []
+# 三類檢查結果：
+# - name_leak: clean（無「楊天真 / 楊思維 / 天真 / 濃人 / 職場明燈」）
+# - tier_a_leak: clean（6 條 tier-A 句皆未出現於腳本）
+# - vomit_term_soft: clean
+
+vomit_terms_locked_5: clean  # 寶寶 / 乾貨 / 絕 / YYDS / 泉 皆未出現
+
+# === 樣本厚度揭露 ===
+
+voice_sample_count: 1  # voice/samples/2021-12-10-vogue-專訪.md
+brand_facts_referenced: []  # 本支為價值觀文、未引用具體事實 / 數字 / 客戶名
+
+# === 字數 / 估秒 ===
+
+word_count: 243
+estimated_seconds: 49  # 243 ÷ 5 = 48.6 → 49
+within_60s_limit: true
+
+# === 審查狀態（緣緣回填） ===
+
+review_status: 待緣緣事後審查
+review_note: ""
+review_date: ""
+
+# === 偏移審查累計（v0.2 第 2.3 節） ===
+
+cumulative_blend_script_count: 1  # 03-scripts/ 第一支 blend 腳本
+distance_to_20_audit: 19
+
+# === 來源依據 ===
+
+depends_on:
+  - voice/style-guide.md
+  - brand-facts.md
+  - CLAUDE.md
+  - 00-design/blend-architecture-v0.2.md
+  - 00-design/blend-architecture-v0.3.md
+  - voice/references/楊天真.md
+  - voice/samples/2021-12-10-vogue-專訪.md
