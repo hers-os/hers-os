@@ -1,0 +1,86 @@
+# script-blender metadata — 對應同名 .md
+# 依 00-design/blend-architecture-v0.2.md 第 3.3 節「放寬時必走的紀錄程序」
+
+script_file: ./{{同名}}.md
+generated_at: {{ISO 時間戳}}
+generated_by: script-blender
+skill_version: v0.1
+
+# === 輸入面 ===
+
+topic: {{題目原文}}
+platform: {{igreels | tiktok}}
+mode: blend  # 或 pure_yuanyuan（沒借 reference 時）
+
+borrow:
+  # 借 1 人時填 1 條、借 2 人時填 2 條、最多 2 條（v0.3 上限）
+  - reference: {{人名、檔名 stem}}
+    reference_file: voice/references/{{人名}}.md
+    reference_status: {{calibrated | uncalibrated_v0.1}}
+    layer: {{反對對象 | 判斷標準 | 使命}}
+    strength: {{強 | 中 | 弱}}
+    strength_pct_estimate: {{15 | 30 | 45}}
+
+borrow_total_strength_pct: {{加總、不可超過 50}}
+
+# === 放寬紀錄（v0.2 第 3.1 節） ===
+
+loosened_rules:
+  # 列這支實際放寬了哪幾條、沒放寬就空陣列 []
+  # 範例：
+  # - rule: 鐵律2-不污染嘴
+  #   detail: 借楊天真[判斷標準層]、強度=中、句感微量滲透
+  # - rule: style-guide-紅線5-不混AB文體
+  #   detail: 鈎子用 B 金句、展開段用 A 視覺、佔比約 30/70
+
+# === Leak 檢查結果（checks/leak-detector.md） ===
+
+leak_warnings: []
+  # 範例：
+  # - type: name_leak
+  #   reference: 楊天真
+  #   hit: "腳本第 3 行出現「楊天真」"
+  #   action_required: 改寫
+  # - type: tier_a_leak
+  #   reference: 楊天真
+  #   tier_a_source: "真誠是溝通中最重要的、沒有之一"
+  #   match_type: 高重合
+  #   hit: "腳本第 5 句"
+  #   action_required: 改寫成意思相同但句法不同
+  # - type: vomit_term_soft
+  #   hit: "腳本第 2 行：『家人們』"
+  #   action_required: 建議改寫
+
+vomit_terms_locked_5: clean  # 5 個鎖死反胃詞檢查、必須是 clean、不然這支根本不該存在
+
+# === 樣本厚度揭露（誠信為本） ===
+
+voice_sample_count: {{讀取時 voice/samples/ 內的檔數、不含 _template}}
+brand_facts_referenced: {{腳本實際引用了 brand-facts.md 哪幾條、列檔內小節編號、沒引用就空陣列}}
+
+# === 字數 / 估秒 ===
+
+word_count: {{中文字數}}
+estimated_seconds: {{字數 ÷ 5、四捨五入}}
+within_60s_limit: {{true | false}}
+
+# === 審查狀態 ===
+
+review_status: 待緣緣事後審查
+review_note: ""
+review_date: ""
+
+# === 偏移審查累計（v0.2 第 2.3 節） ===
+
+cumulative_blend_script_count: {{掃 03-scripts/ 的 blend 模式腳本總數、含這支}}
+distance_to_20_audit: {{20 減上欄、≤0 表示該審查了}}
+
+# === 來源依據 ===
+
+depends_on:
+  - voice/style-guide.md
+  - brand-facts.md
+  - CLAUDE.md
+  - 00-design/blend-architecture-v0.2.md
+  - 00-design/blend-architecture-v0.3.md
+  # 每個被借的 reference 檔
